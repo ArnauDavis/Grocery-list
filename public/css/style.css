@@ -10,12 +10,12 @@ body {
     flex-direction: column;
 }
 
-.card {
+.todo-list-card {
     background-color: #f5f3f7; /* Very light lavender-gray color for the card */
     border-radius: 16px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for the card */
     padding: 40px; /* Added more vertical space inside the card */
-    max-width: 600px; /* Decreased max-width for a more compact card */
+    max-width: 600px; /* Narrower card */
     width: 100%;
     text-align: center;
     position: relative;
@@ -72,6 +72,12 @@ ul.todoItems {
     font-style: italic;
 }
 
+.price {
+    font-size: 1.2em;
+    color: #06d6a0; /* Match with the teal color for price */
+    font-weight: bold;
+}
+
 .fa-trash {
     font-size: 1.5em;
     color: #ff4c4c;
@@ -99,7 +105,7 @@ form input[type="text"] {
     margin: 0 auto;
 }
 
-form input[type="submit"] {
+form input[type="submit"], #accountForTaxBtn {
     padding: 12px;
     font-size: 1.2em;
     background-color: #5438dc;
@@ -110,6 +116,13 @@ form input[type="submit"] {
     margin: 0 auto;
 }
 
-form input[type="submit"]:hover {
+form input[type="submit"]:hover, #accountForTaxBtn {
     background-color: #4429b0;
+}
+
+h2.totalCash {
+    font-size: 1.5em;
+    color: #06d6a0; /* Match with teal color for total cash */
+    font-weight: bold;
+    margin-top: 20px;
 }

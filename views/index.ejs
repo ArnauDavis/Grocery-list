@@ -18,36 +18,37 @@
     <title>Document</title>
 </head>
 <body>
+   
 
-    <!-- Card container for the entire content -->
-    <div class="card">
+    <div class="todo-list-card">
         <h1>Grocery List</h1>
-        <!-- Todo items list -->
+
+        
         <ul class="todoItems">
-        <% for(let i=0; i < items.length; i++) {%>
-            <li class="item">
-                <!-- Task text on the left -->
-                <% if(items[i].completed === true) {%>
-                    <span class="completed"><%= items[i].thing %></span>
-                <% } else { %>
-                    <span><%= items[i].thing %></span>
-                <% } %>
-
-                <!-- Trash icon on the right -->
-                <span class="fa fa-trash"></span>
-            </li>
-        <% } %>
+            <% items.forEach(item => { %>
+                <li class="item">
+                    <span class="<%= item.completed ? 'completed' : '' %>"><%= item.thing %></span>
+                    <span class="price">$<%= item.price && !isNaN(item.price) ? item.price.toFixed(2) : '0.00' %></span> <!-- Ensure price is a valid number -->
+                    <span class="fa fa-trash"></span>
+                </li>
+            <% }) %>
         </ul>
+    
 
-        <!-- Tasks left to do -->
-        <h2>Left to do: <%= left %></h2>
+    <form action="/addTodo" method="POST">
+        <input type="text" name="todoItem" placeholder="Item Needed">
+        <input type="text" name="price" placeholder="Price" pattern="^[0-9]+(\.[0-9]{1,2})?$">
+        <input type="submit" value="Add Item">
+    </form>
 
-        <!-- Add a Todo form -->
-        <h2>Add A Todo:</h2>
-        <form action="/addTodo" method="POST">
-            <input type="text" placeholder="Thing To Do" name="todoItem">
-            <input type="submit" value="Add">
-        </form>
+<!-- Update the "Left to do" to show total cash -->
+<h2>Total Cost: $<span id="totalCash"><%= totalCash.toFixed(2) %></span></h2>
+
+<!-- Account for Tax Button -->
+<button id="accountForTaxBtn">Account for Tax</button>
+
+<h2>With Tax: $<span id="cashAfterTax">0.00</span></h2> <!-- This will display the cash after tax -->
+
     </div>
 
     <script src='js/main.js'></script>
