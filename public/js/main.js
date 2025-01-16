@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
         accountForTaxBtn.addEventListener('click', () => {
             const totalCash = parseFloat(totalCashSpan.innerText) // Get the current total cash
             if (!isNaN(totalCash)) {
-                const cashAfterTax = totalCash + (totalCash * 0.7) // Add 70% tax
+                const cashAfterTax = totalCash + (totalCash * 0.07) // Add 7% tax
                 cashAfterTaxSpan.innerText = cashAfterTax.toFixed(2) // Display the result with two decimal places
             } else {
                 cashAfterTaxSpan.innerText = '0.00' // Default if totalCash is invalid
