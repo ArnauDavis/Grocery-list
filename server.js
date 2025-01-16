@@ -6,10 +6,10 @@ require('dotenv').config()
 
 
 let db, 
-    dbConnectionStr = process.env.DB_STRING,    //this is the connection string that is set up in the env file
+    dbConnectionStr = process.env.MONGODB_URI,    //this is the connection string that is set up in the env file
     dbName = 'todo'
 
-MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
+MongoClient.connect(dbConnectionStr)
     .then(client => {
         console.log(`Connected to ${dbName} Database`)
         db = client.db(dbName)
