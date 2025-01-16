@@ -1,7 +1,115 @@
-h1{
-    color: red;
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #5438dc, #06d6a0); /* Gradient background */
+    color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
 }
-.completed{
-    color: gray;
+
+.card {
+    background-color: #f5f3f7; /* Very light lavender-gray color for the card */
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for the card */
+    padding: 40px; /* Added more vertical space inside the card */
+    max-width: 600px; /* Decreased max-width for a more compact card */
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 10; /* Ensures the card stays above the background */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #5438dc; /* Keep the purple color for the title */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #06d6a0; /* Keep the teal color for the subtitle */
+    text-align: center;
+    margin-top: 20px;
+}
+
+ul.todoItems {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+    padding-right: 0; /* Ensure no extra space on the right side */
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.item:hover {
+    transform: translateY(-5px); /* Slight lift when hovering */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+.item span {
+    font-size: 1.2em;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.completed {
+    color: #bbb; /* Softened grey for completed items to keep them subtle */
     text-decoration: line-through;
+    font-style: italic;
+}
+
+.fa-trash {
+    font-size: 1.5em;
+    color: #ff4c4c;
+    cursor: pointer;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form input[type="text"] {
+    padding: 12px;
+    font-size: 1.2em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form input[type="submit"] {
+    padding: 12px;
+    font-size: 1.2em;
+    background-color: #5438dc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+form input[type="submit"]:hover {
+    background-color: #4429b0;
 }
