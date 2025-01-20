@@ -12,6 +12,7 @@ This is an app that tracks groceries you need to buy, and gives an option to cal
 ## How It's Made: 
 
 **Tech used:** JavaScript Express MongoDB
+
 I took a template for a to do list and reconfigured it to my needs. I added some css to make the app a bit more lively. Moving into the js, I included a method to track if a item had been purchased or not, this would allow the total cost be affected by items purchased or unpurchased. Completed vs uncompleted (purchased vs unpurchased) have their own routes within the server.js. I also included the ability to delete items which will also influence the total price. The beautiful thing about ejs is I did not have to hard code any entries. The spans will update accordingly based on what has been submitted to the data base. 
 
 
