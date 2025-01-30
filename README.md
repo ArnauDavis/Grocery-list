@@ -1,11 +1,12 @@
 # Grocery Tracker
-This is an app that tracks groceries you need to buy, and gives an option to calculate the tax if need be. 
+**IMPORTANT: app will take 50 seconds to load (it is hosted for free) Submit and delete route disabled because I don't want to moderate**
+This is an app that tracks groceries you need to buy, and gives an option to calculate the tax if need be. Mark as bought or not by clicking item. Result stored in database and remains after refresh!
 
-**Link to project:** Coming soon
+**Link to project:** https://pricepal-wzhd.onrender.com/
 
 
 <div style="height: 200px; overflow: hidden;">
-    <img src="" style="height: auto; width: 100%; object-fit: cover; transform: translateY(-30px);" alt="shadow-gif"/>
+    <img src="pricepal-gif.gif" style="height: auto; width: 100%; object-fit: cover; transform: translateY(-30px);" alt="pricepal-gif"/>
 </div>
 
 
