@@ -1,3 +1,4 @@
+/*
 const deleteBtn = document.querySelectorAll('.fa-trash') // Selects all trash cans in DOM
 const items = document.querySelectorAll('.item') // Selects all li elements (task boxes)
 
@@ -68,7 +69,7 @@ async function markUnComplete(itemText) {
         console.log(err)
     }
 }
-
+*/
 document.addEventListener('DOMContentLoaded', function() {
     // Account for Tax functionality
     const accountForTaxBtn = document.getElementById('accountForTaxBtn')

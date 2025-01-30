@@ -54,7 +54,7 @@ app.get('/', async (request, response) => {
         response.status(500).send('Error fetching data')
     }
 })
-
+/*
 app.post('/addTodo', (request, response) => {
     const { todoItem, price } = request.body
     const priceValue = parseFloat(price) || 0  // Ensure price is a valid number, default to 0 if not
@@ -103,6 +103,7 @@ app.delete('/deleteItem', (request, response) => {
     })
     .catch(error => console.error(error))
 })
+*/
 
 app.listen(process.env.PORT || PORT, ()=>{
     console.log(`Server running on port ${PORT}`)
