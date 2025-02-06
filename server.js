@@ -20,7 +20,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-/*
+
 app.get('/',async (request, response)=>{ //this grabs everything from the mongodb to be sent to the ejs file
     const todoItems = await db.collection('todos').find().toArray()
     const itemsLeft = await db.collection('todos').countDocuments({completed: false})
@@ -34,7 +34,7 @@ app.get('/',async (request, response)=>{ //this grabs everything from the mongod
     // })
     // .catch(error => console.error(error))
 })
-*/
+
 
 app.get('/', async (request, response) => {
     try {
@@ -54,7 +54,7 @@ app.get('/', async (request, response) => {
         response.status(500).send('Error fetching data')
     }
 })
-/*
+
 app.post('/addTodo', (request, response) => {
     const { todoItem, price } = request.body
     const priceValue = parseFloat(price) || 0  // Ensure price is a valid number, default to 0 if not
@@ -66,7 +66,7 @@ app.post('/addTodo', (request, response) => {
     })
     .catch(error => console.error(error))
 })
-*/
+
 app.put('/markComplete', (request, response) => {
     db.collection('todos').updateOne(
         { thing: request.body.itemFromJS }, // Find task by name
@@ -94,7 +94,7 @@ app.put('/markUnComplete', (request, response) => {
     })
     .catch(error => console.error(error))
 })
-/*
+
 app.delete('/deleteItem', (request, response) => {
     db.collection('todos').deleteOne({ thing: request.body.itemFromJS }) // Delete task by name
     .then(result => {
@@ -103,7 +103,7 @@ app.delete('/deleteItem', (request, response) => {
     })
     .catch(error => console.error(error))
 })
-*/
+
 
 app.listen(process.env.PORT || PORT, ()=>{
     console.log(`Server running on port ${PORT}`)
